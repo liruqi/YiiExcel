@@ -1,13 +1,13 @@
 # YiiExcel
 
-Yii extension wrapper for [PHPExcel](https://github.com/PHPOffice/PHPExcel) class autoload on Yii applications.
+Yii extension wrapper for [PHPExcel](https://github.com/PHPOffice/PHPExcel) class autoload on Yii 1.1.15 applications.
 
 ## Installation
 
 * Copy `yiiexcel` directory to `protected/extensions`.
 * Download [PHPExcel](http://phpexcel.codeplex.com/releases/view/96183).
-* Create a `phpexcel` directory on `protected/vendor`.
-* Unzip `PHPExcel` and copy `Classes` directory content to `protected/vendor/phpexcel`.
+* Create a `phpexcel` directory on `protected/vendors`. (Note in previous yii versions, default path is `protected/vendor`, import config should be changed with path name.)
+* Unzip `PHPExcel` and copy `Classes` directory content to `protected/vendors/phpexcel`.
 * Edit `PHPExcel.php` file and comment the autoload inclusion:
 
 ~~~
@@ -48,7 +48,7 @@ $app->run();
 // autoloading model and component classes
 'import'=>array(
     ...
-    'application.vendor.phpexcel.PHPExcel',
+    'application.vendors.phpexcel.PHPExcel',
     ...
 ),
 ~~~
