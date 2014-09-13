@@ -25,7 +25,7 @@
  
 class YiiExcel {
     
-    public static $_pathAlias = 'application.vendors.phpexcel';
+    public static $_pathAlias = 'application.vendor.phpexcel';
     
     static function autoload($pClassName){
         if ((class_exists($pClassName, false)) || (strpos($pClassName, 'PHPExcel') !== 0)) {
